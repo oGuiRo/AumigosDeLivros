@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aumigos de Livros</title>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #6b0f1a;
+  color: #d4af37;
+  text-align: center;
+  padding: 20px;
+}
+
+nav {
+  background: #8b1e2d;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  background: #d4af37;
+  color: black;
+  margin: 10px;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: #f1c40f;
+  transform: scale(1.05);
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* SEÇÕES */
+
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  color: white;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: white;
+  padding: 15px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* BACKGROUNDS */
+/* Necessario uma imagem mais adequada para cada um dos topicos, mas por enquanto, essas imagens são apenas ilustrativas. */
+#sobre {
+  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover;
+}
+
+#projetos {
+  background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') center/cover;
+}
+
+#ajudar {
+  background: url('https://images.unsplash.com/photo-1515169067865-5387ec356754') center/cover;
+}
+
+#contato {
+  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
+}
+
+footer {
+  background: #6b0f1a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Aumigos de Livros</h1>
+  <p>Transformando vidas através da leitura 🐶📚</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#projetos">Projetos</a>
+  <a href="#ajudar">Como ajudar</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="sobre" class="fade">
+  <div class="overlay">
+    <h2>Sobre nós</h2>
+    <p>
+      Somos uma ONG dedicada a incentivar a leitura e levar conhecimento
+      para comunidades, promovendo inclusão social e educação.
+    </p>
+  </div>
+</section>
+
+<section id="projetos" class="fade">
+  <div class="overlay">
+    <h2>Nossos Projetos</h2>
+    <p>
+      Desenvolvemos ações sociais com foco em educação, leitura e impacto positivo.
+    </p>
+  </div>
+</section>
+
+<section id="ajudar" class="fade">
+  <div class="overlay">
+    <h2>Como ajudar</h2>
+    <p>
+      Você pode contribuir doando livros, sendo voluntário ou ajudando a divulgar o projeto.
+    </p>
+  </div>
+</section>
+
+<section id="contato" class="fade">
+  <div class="overlay">
+    <h2>Contato</h2>
+    <p>Fale conosco pelo WhatsApp</p>
+    <a href="https://wa.me/5599723496" style="color:yellow;">Clique aqui</a>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Aumigos de Livros</p>
+</footer>
+
+<script>
+const elements = document.querySelectorAll('.fade');
+
+function showOnScroll() {
+  const trigger = window.innerHeight * 0.85;
+
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+
+    if (top < trigger) {
+      el.classList.add('show');
+    }
+  });
+}
+
+window.addEventListener('scroll', showOnScroll);
+
+</script>
+
+<a class="whatsapp" href="https://wa.me/5599999999999" target="_blank">
+  💬 WhatsApp
+</a>
+
+</body>
+</html>
