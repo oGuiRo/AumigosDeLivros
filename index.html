@@ -1,200 +1,254 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aumigos de Livros</title>
-
-<style>
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
-
-header {
-  background: #6b0f1a;
-  color: #d4af37;
-  text-align: center;
-  padding: 20px;
-}
-
-nav {
-  background: #8b1e2d;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 15px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-nav a {
-  background: #d4af37;
-  color: black;
-  margin: 10px;
-  padding: 15px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  background: #f1c40f;
-  transform: scale(1.05);
-}
-
-.fade {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.fade.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* SEÇÕES */
-
-section {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 40px;
-  color: white;
-}
-
-.overlay {
-  background: rgba(0,0,0,0.6);
-  padding: 30px;
-  border-radius: 10px;
-  max-width: 700px;
-}
-
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 15px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-size: 18px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-/* BACKGROUNDS */
-/* Necessario uma imagem mais adequada para cada um dos topicos, mas por enquanto, essas imagens são apenas ilustrativas. */
-#sobre {
-  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f') center/cover;
-}
-
-#projetos {
-  background: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b') center/cover;
-}
-
-#ajudar {
-  background: url('https://images.unsplash.com/photo-1515169067865-5387ec356754') center/cover;
-}
-
-#contato {
-  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') center/cover;
-}
-
-footer {
-  background: #6b0f1a;
-  color: white;
-  text-align: center;
-  padding: 15px;
-}
-</style>
+<title>Instituto Aumigo de Livros</title>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-<header>
-  <h1>Aumigos de Livros</h1>
-  <p>Transformando vidas através da leitura 🐶📚</p>
-</header>
-
 <nav>
-  <a href="#sobre">Sobre</a>
-  <a href="#projetos">Projetos</a>
-  <a href="#ajudar">Como ajudar</a>
-  <a href="#contato">Contato</a>
+  <a class="nav-logo" href="#">
+    <img src="assets/Logo.png" alt="Animais Aumigos" class="nav-logo-img">
+    Aumigos de Livros
+  </a>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#como-funciona">Como funciona</a></li>
+    <li><a href="#catalogo">Catálogo</a></li>
+    <li><a href="#impacto">Nosso impacto</a></li>
+    <li><a href="#doe-livros">Doe livros</a></li>
+  </ul>
+  <button class="nav-btn">Doar Livro</button>
 </nav>
 
-<section id="sobre" class="fade">
-  <div class="overlay">
+<!-- LANDING PAGE 1 -->
+<section class="hero">
+  <div class="hero-text">
+    <h1>
+      Aumigos de <br>Livros
+      <span>Instituto de Livros</span>
+    </h1>
+    <p>Transformamos livros doados em recursos para resgatar, tratar e cuidar de cães e gatos em situação de vulnerabilidade. Cada livro doado pode ajudar a salvar uma vida.</p>
+    <button class="btn-primary">Explore nosso catálogo</button>
+  </div>
+  <div class="hero-image">
+    <img src="assets/Logo.png" alt="Animais Aumigos" class="hero-logo-img">
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <div class="stat-num">R$500k+</div>
+    <div class="stat-label">Arrecadados para animais</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100+</div>
+    <div class="stat-label">Pontos de coleta</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">2018</div>
+    <div class="stat-label">Fundado em Vitória, ES</div>
+  </div>
+  <div class="stat">
+    <div class="stat-num">100%</div>
+    <div class="stat-label">Revertido em cuidados</div>
+  </div>
+</div>
+
+
+<!-- SOBRE -->
+<section class="section-sobre" id="sobre">
+  <div class="sobre-texto">
     <h2>Sobre nós</h2>
-    <p>
-      Somos uma ONG dedicada a incentivar a leitura e levar conhecimento
-      para comunidades, promovendo inclusão social e educação.
-    </p>
+    <p>O Instituto Aumigo de Livros foi criado em Vitória, no Espírito Santo, unindo duas causas importantes: o incentivo à leitura e a proteção animal. A ideia surgiu em 2018, quando a fundadora Magali Gláucia percebeu o impacto do abandono animal e decidiu transformar isso em uma ação solidária.</p>
+    <p>Ela começou vendendo livros próprios para arrecadar dinheiro para uma ONG de proteção animal. O projeto cresceu rapidamente com ajuda de alunos, voluntários e pessoas da comunidade, até se tornar oficialmente um instituto em 2020.</p>
+    <p>O projeto já arrecadou mais de meio milhão de reais para a causa animal e ajudou diretamente centenas de animais ao longo dos anos. Um livro pode se transformar em esperança e cuidado para muitos animais resgatados.</p>
+  </div>
+  <div class="sobre-equipe">
+    <h3>Quem faz acontecer</h3>
+    <div class="equipe-grid">
+      <div class="membro">
+        <div class="membro-foto">MG</div>
+        <div class="membro-nome">Magali Gláucia</div>
+        <div class="membro-cargo">Fundadora & Protetora</div>
+      </div>
+      <div class="membro">
+        <div class="membro-foto">VL</div>
+        <div class="membro-nome">Voluntários</div>
+        <div class="membro-cargo">Comunidade & Alunos</div>
+      </div>
+      <div class="membro">
+        <div class="membro-foto">PC</div>
+        <div class="membro-nome">Parceiros</div>
+        <div class="membro-cargo">Clínicas & Pontos de Coleta</div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="projetos" class="fade">
-  <div class="overlay">
-    <h2>Nossos Projetos</h2>
-    <p>
-      Desenvolvemos ações sociais com foco em educação, leitura e impacto positivo.
-    </p>
+<!-- COMO FUNCIONA -->
+<section class="section-como" id="como-funciona">
+  <div>
+    <div class="hero-image" style="height: 100%; min-height: 480px;">
+      <img src="assets/Img2.png" alt="Como funciona" class="section-img">
+    </div>
+  </div>
+  <div>
+    <h2>Cada livro<br>salva uma vida</h2>
+    <p>O ciclo é simples: você doa um livro que não usa mais, o instituto organiza e vende, e o recurso vai direto para o resgate e tratamento de animais.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Doe seu livro</h3>
+          <p>Livros usados em bom estado são entregues em nossos pontos de coleta parceiros.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>O instituto organiza e vende</h3>
+          <p>Os livros são vendidos em feiras, eventos e pelas redes sociais.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Animais são cuidados</h3>
+          <p>100% do valor vai para resgates, vacinas, castrações, ração e lares temporários.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="ajudar" class="fade">
-  <div class="overlay">
-    <h2>Como ajudar</h2>
-    <p>
-      Você pode contribuir doando livros, sendo voluntário ou ajudando a divulgar o projeto.
-    </p>
+<!-- CATÁLOGO -->
+<section class="section-catalogo" id="catalogo">
+  <h2>Nosso catálogo</h2>
+  <p>Cada livro adotado transforma uma vida.</p>
+  <div class="livros-grid">
+    <div class="livro-card">
+      <div class="livro-capa">
+        <img src="assets/livro1.jpg" alt="A Menina que Roubava Livros">
+      </div>
+      <div class="livro-info">
+        <span class="livro-tag">Romance</span>
+        <div class="livro-titulo">A Menina que Roubava Livros</div>
+        <div class="livro-autor">Markus Zusak</div>
+        <div class="livro-preco">R$ 18,00</div>
+      </div>
+    </div>
+    <div class="livro-card">
+      <div class="livro-capa">
+        <img src="assets/livro2.jpg" alt="O Mundo de Sofia">
+      </div>
+      <div class="livro-info">
+        <span class="livro-tag">Filosofia</span>
+        <div class="livro-titulo">O Mundo de Sofia</div>
+        <div class="livro-autor">Jostein Gaarder</div>
+        <div class="livro-preco">R$ 22,00</div>
+      </div>
+    </div>
+    <div class="livro-card">
+      <div class="livro-capa">
+        <img src="assets/livro3.jpg" alt="Sapiens">
+      </div>
+      <div class="livro-info">
+        <span class="livro-tag">Ciência</span>
+        <div class="livro-titulo">Sapiens</div>
+        <div class="livro-autor">Yuval Noah Harari</div>
+        <div class="livro-preco">R$ 25,00</div>
+      </div>
+    </div>
+    <div class="livro-card">
+      <div class="livro-capa">
+        <img src="assets/livro4.jpg" alt="O Pequeno Príncipe">
+      </div>
+      <div class="livro-info">
+        <span class="livro-tag">Infantil</span>
+        <div class="livro-titulo">O Pequeno Príncipe</div>
+        <div class="livro-autor">Antoine de Saint-Exupéry</div>
+        <div class="livro-preco">R$ 15,00</div>
+      </div>
+    </div>
+  </div>
+  <button class="btn-primary">Ver catálogo completo</button>
+</section>
+
+<!-- IMPACTO -->
+<section class="section-impacto" id="impacto">
+  <h2>Nosso impacto</h2>
+  <div class="boxes-grid">
+    <div class="impact-box">
+      <h3>Resgate e acolhimento</h3>
+      <p>Cães e gatos em situação de rua recebem abrigo seguro, alimentação e carinho enquanto aguardam adoção responsável.</p>
+    </div>
+    <div class="impact-box">
+      <h3>Tratamento veterinário</h3>
+      <p>Cada livro vendido financia consultas, cirurgias, vacinas, medicamentos e castrações para quem mais precisa.</p>
+    </div>
+    <div class="impact-box">
+      <h3>Adoção responsável</h3>
+      <p>Realizamos campanhas de conscientização e conectamos animais recuperados a famílias que os acolhem com amor.</p>
+    </div>
   </div>
 </section>
 
-<section id="contato" class="fade">
-  <div class="overlay">
-    <h2>Contato</h2>
-    <p>Fale conosco pelo WhatsApp</p>
-    <a href="https://wa.me/5599723496" style="color:yellow;">Clique aqui</a>
+<!-- DOE LIVROS -->
+<section class="section-doe" id="doe-livros">
+  <div>
+    <h2>Doe um livro,<br>salve uma vida</h2>
+    <p>Seus livros parados têm o poder de transformar a realidade de animais vulneráveis. Leve em um dos nossos pontos de coleta ou entre em contato para combinarmos a retirada.</p>
+    <button class="btn-doe">Quero doar livros</button>
+    <div class="pontos-coleta">
+      <p class="pontos-titulo">Pontos de coleta</p>
+      <div class="pontos-tags">
+        <a class="ponto-tag" href="https://instagram.com/petclinicveterinaria" target="_blank" rel="noopener">@petclinicveterinaria</a>
+        <a class="ponto-tag" href="https://instagram.com/matrizcasacriativa" target="_blank" rel="noopener">@matrizcasacriativa</a>
+        <a class="ponto-tag" href="https://instagram.com/ilha_pet" target="_blank" rel="noopener">@ilha_pet</a>
+        <a class="ponto-tag" href="https://instagram.com/cema_veterinaria" target="_blank" rel="noopener">@cema_veterinaria</a>
+        <a class="ponto-tag" href="https://instagram.com/clinicavetgb" target="_blank" rel="noopener">@clinicavetgb</a>
+        <a class="ponto-tag" href="https://instagram.com/studiorubianafernandes" target="_blank" rel="noopener">@studiorubianafernandes</a>
+        <a class="ponto-tag" href="https://instagram.com/faesa_oficial" target="_blank" rel="noopener">@faesa_oficial</a>
+        <a class="ponto-tag" href="https://instagram.com/splashbuffetinfantil" target="_blank" rel="noopener">@splashbuffetinfantil</a>
+        <a class="ponto-tag" href="https://instagram.com/judo_clube_nippon" target="_blank" rel="noopener">@judo_clube_nippon</a>
+      </div>
+    </div>
+  </div>
+  <div class="doe-form">
+    <div>
+      <label>Seu nome</label>
+      <input type="text" placeholder="Como podemos te chamar?">
+    </div>
+    <div>
+      <label>E-mail ou WhatsApp</label>
+      <input type="text" placeholder="Para combinarmos a retirada">
+    </div>
+    <div>
+      <label>Cidade / Bairro</label>
+      <input type="text" placeholder="Para organizar a logística">
+    </div>
+    <div>
+      <label>Quais livros você tem?</label>
+      <textarea placeholder="Títulos, quantidade, estado de conservação..."></textarea>
+    </div>
+    <button type="button">Entrar em contato →</button>
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Aumigos de Livros</p>
+  <div class="footer-logo">Aumigos de Livros</div>
+  <div class="footer-contatos">
+    <p>Instagram: <a class="footer-link" href="https://instagram.com/aumigodelivros" target="_blank" rel="noopener">@aumigodelivros</a></p>
+    <p>Loja: <a class="footer-link" href="https://instagram.com/lojaaumigodelivros" target="_blank" rel="noopener">@lojaaumigodelivros</a></p>
+    <p>PIX: <strong>aumigodelivros@gmail.com</strong></p>
+  </div>
+  <p>© 2025 Instituto Aumigo de Livros · Vitória, ES · Feito com 🐾 e muitos livros.</p>
 </footer>
-
-<script>
-const elements = document.querySelectorAll('.fade');
-
-function showOnScroll() {
-  const trigger = window.innerHeight * 0.85;
-
-  elements.forEach(el => {
-    const top = el.getBoundingClientRect().top;
-
-    if (top < trigger) {
-      el.classList.add('show');
-    }
-  });
-}
-
-window.addEventListener('scroll', showOnScroll);
-
-</script>
-
-<a class="whatsapp" href="https://wa.me/5599999999999" target="_blank">
-  💬 WhatsApp
-</a>
 
 </body>
 </html>
